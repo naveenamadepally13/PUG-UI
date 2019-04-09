@@ -11,12 +11,12 @@ function sendformData(){
     let userURLData = {
         email : user,
         url: {
-        'url1':url1,
-        'url2':url2,
-        'url3':url3
+            url1:url1,
+            url2:url2,
+            url3:url3
         }
     };
-    console.log(userURLData);
+    // console.log(userURLData);
 
     $.ajax({
         type: "POST",

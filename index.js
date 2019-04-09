@@ -30,8 +30,6 @@ app.post('/home', (req, res, next) => {
 });
 app.post('/setimagedata', (req, res, next) => {
     console.log("______________--setimagedata________");
-    console.log(req.body.email);
-    console.log(req.body.url);
     res.cookie(req.body.email,req.body.url);
     console.log(JSON.stringify(req.cookies));
 });
