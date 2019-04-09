@@ -1,4 +1,5 @@
 // const user= !{user};
+// const urlName= !{urlName};
 var imageUrl1='';
 var imageUrl2='';
 var imageUrl3='';
@@ -23,7 +24,15 @@ function sendformData(){
         url: "/setimagedata",
         data: userURLData,
         dataType: 'json',
-        success: function() { console.log('success');},
-        error  : function() { console.log('error');}
+        success: function() { $.ajax({
+            type: "GET",
+            url: "/getuser"
+        });},
+        error: function() { $.ajax({
+            type: "GET",
+            url: "/getuser"
+        });}
     });
+    var c = JSON.stringify(document.cookie);
+    $("#c").text(c);
 }
