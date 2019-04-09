@@ -1,13 +1,40 @@
 doctype html
 html
     head
-        title home
-        script(src="/js/login.js")
-body
-- var buttonClass=['btn', 'btn-lg', 'btn-primary', 'btn-block'];
-
-    a(class='buttonClass' href='/getuser') Get Cookie data
-
-    p #{user}
+        title Login
+        link(rel='stylesheet', href='/css/styles.css')
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
+        script(src='js/jquery.min.js')
+        script(src='js/home.js')
 
 
+    body
+        .container-fluid
+            .form-imageUpload
+                .row
+                    .col-md-12
+                        div
+                            h1.h3.mb-3.font-weight-normal Create Gallery
+                    .col-md-12
+                        input(type='text', id='url1', placeholder='Enter Image URL 1')
+                    .col-md-12
+                        input(type='text', id='url2', placeholder='Enter Image URL 2')
+                    .col-md-12
+                        input(type='text', id='url3', placeholder='Enter Image URL 3')
+                    .col-md-12
+                        button.btn.btn-primary( type="submit" onclick='sendformData()') Submit
+                div(style='margin-left:10px')
+                    .row
+                        .col-md-4
+                            card(style='width: 18rem;')
+                               .card-body(class="cardbody")
+                                   img.card-img-top(src='', alt='Card image cap')
+                        .col-md-4
+                             card
+                               .card-body(class="cardbody")
+                                   img.card-img-top(src='', alt='Card image cap')
+                        .col-md-4
+                              card
+                                .card-body(class="cardbody")
+                                     img.card-img-top(src='', alt='Card image cap')
