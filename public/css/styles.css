@@ -58,6 +58,9 @@ body {
     border-bottom-color: lightsteelblue;
     border-radius: unset;
 }
+.hide {
+    display: none;
+}
 /*.cardbody img{
     width: 18rem;
     margin:0 0 0 0;

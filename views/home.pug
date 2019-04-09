@@ -23,7 +23,7 @@ html
                     .col-md-12
                         input(type='text', id='url3', placeholder='Enter Image URL 3')
                     .col-md-12
-                        button.btn.btn-primary( type="submit" onclick='sendformData()') Submit
+                        button.btn.btn-primary(type="submit" onclick='sendformData()') Submit
                 div(style='margin-left:10px')
                     .row
                         .col-md-4
@@ -38,3 +38,6 @@ html
                               card
                                 .card-body(class="cardbody")
                                      img.card-img-top(src='', alt='Card image cap')
+
+                p#userEmail(class='hide') #{user}
+
