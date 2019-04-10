@@ -14,31 +14,22 @@ html
             .form-imageUpload
                 .row
                     .col-md-12
-                        div
-                            h1.h3.mb-3.font-weight-normal Create Gallery
+                        div(style='margin-top:10px')
+                            h1.h3.mb-3.font-weight-normal Add Address
                     .col-md-12
-                        input(type='text', id='url1', placeholder='Enter Image URL 1')
+                        input(type='text', id='city', placeholder='Enter City')
                     .col-md-12
-                        input(type='text', id='url2', placeholder='Enter Image URL 2')
+                        input(type='text', id='state', placeholder='Enter State')
                     .col-md-12
-                        input(type='text', id='url3', placeholder='Enter Image URL 3')
-                    .col-md-12
+                        input(type='text', id='pin', placeholder='Enter PIN Code')
+                    .col-md-4
                         button.btn.btn-primary(type="submit" onclick='sendformData()') Submit
-                div(style='margin-left:10px')
-                    .row
-                        .col-md-4
-                            card(style='width: 18rem;')
-                               .card-body(class="cardbody")
-                                   img.card-img-top(src=#{url1}, alt='Card image cap')
-                        .col-md-4
-                             card
-                               .card-body(class="cardbody")
-                                   img.card-img-top(src=#{url2}, alt='Card image cap')
-                        .col-md-4
-                              card
-                                .card-body(class="cardbody")
-                                     img.card-img-top(src=#{url3}, alt='Card image cap')
-
+                    .col-md-4
+                        a(href='/getuser') Get Cookie
+                .row
+                     .col-md-12
+                         h5(style='margin-top:10px') Cookie Data
+                         p(style='margin-top:10px') #{urlName}
                 p#userEmail(class='hide') #{user}
-                p#c
+
 

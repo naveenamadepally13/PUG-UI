@@ -29,13 +29,12 @@ app.post('/home', (req, res, next) => {
     res.render('home', {user: req.body.email});
 });
 app.post('/setimagedata', (req, res, next) => {
-    console.log("______________--setimagedata________");
-    // console.log(req.body.email);
-    // console.log(req.body);
     res.cookie(req.body.email,req.body);
     res.render('home', {user: req.body.email});
 });
-//Iterate users data from cookie
+
 app.get('/getuser', (req, res)=> {
-    res.render('home', {urlName: JSON.stringify(req.cookies), user: req.body.email});
+    /*let a = JSON.parse(JSON.stringify(req.cookies));
+    console.log(a);*/
+    res.render('home', {urlName:JSON.stringify(req.cookies), user: req.body.email});
 });
